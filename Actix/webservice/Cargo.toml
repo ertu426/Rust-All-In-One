@@ -1,0 +1,18 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+actix-rt = "2.6.0"
+serde = {version = "1.0.136", features = ["derive"]}
+chrono = {version = "0.4.19", features = ["serde"]}
+
+[[bin]]
+name = "server1"
+
+[[bin]]
+name = "teacher-service"
