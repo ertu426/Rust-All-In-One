@@ -8,8 +8,16 @@ edition = "2021"
 [dependencies]
 actix-web = "4"
 actix-rt = "2.6.0"
+dotenv = "0.15.0"
 serde = {version = "1.0.136", features = ["derive"]}
 chrono = {version = "0.4.19", features = ["serde"]}
+openssl = {version = "0.10.38", features = ["vendored"]}
+sqlx = {version = "0.5.11", default_features = false ,features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono",
+]}
 
 [[bin]]
 name = "server1"
