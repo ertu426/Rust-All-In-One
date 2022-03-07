@@ -4,16 +4,16 @@ use std::sync::Mutex;
 use std::{io, env};
 use dotenv::dotenv;
 
-#[path = "../db_access.rs"]
-mod db_access;
-#[path = "../handlers.rs"]
+#[path = "../handlers/mod.rs"]
 mod handlers;
+#[path = "../dbaccess/mod.rs"]
+mod dbaccess;
+#[path = "../models/mod.rs"]
+mod models;
 #[path = "../routers.rs"]
 mod routers;
 #[path = "../errors.rs"]
 mod errors;
-#[path = "../models.rs"]
-mod models;
 #[path = "../state.rs"]
 mod state;
 

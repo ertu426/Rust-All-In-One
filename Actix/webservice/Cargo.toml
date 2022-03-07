@@ -20,7 +20,4 @@ sqlx = {version = "0.5.11", default_features = false ,features = [
 ]}
 
 [[bin]]
-name = "server1"
-
-[[bin]]
 name = "teacher-service"
