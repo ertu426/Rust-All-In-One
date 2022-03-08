@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+    <h1>Teacher list</h1>
+    <ol>
+        {% for t in teachers %}
+        <li>
+            <h5>{{t.name}}</h5>
+            <div>{{t.profile}}</div>
+        </li>
+        {% endfor %}
+    </ol>
+
+    <div style="margin-top: 20px">
+        <a href="/register">Register a teacher</a>
+    </div>
+</body>
+</html>
