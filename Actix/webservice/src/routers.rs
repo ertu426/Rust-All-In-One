@@ -16,15 +16,13 @@ pub fn course_routes(cfg: &mut web::ServiceConfig) {
         );
 }
 
-
 pub fn teacher_routes(cfg: &mut web::ServiceConfig) {
     cfg
         .service(web::scope("/teacher")
-            .route("/", web::post().to(teacher::post_new_teacher))
             .route("/", web::get().to(teacher::get_all_teachers))
+            .route("/", web::post().to(teacher::post_new_teacher))
             .route("/{teacher_id}", web::get().to(teacher::get_teacher_details))
             .route("/{teacher_id}", web::put().to(teacher::update_teacher_details))
-            .route("/{teacher_id}", web::delete().to(teacher::delete_teacher)),
+            .route("/{teacher_id}", web::delete().to(teacher::delete_teacher))
         );
-
 }
